@@ -17,13 +17,16 @@ default: &default
   database: <%= ENV["POSTGRESQL_DATABASE"] %>
 
 development:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  database: rails_ex_development
+  pool: 5
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: rails_ex_test
   pool: 5
-  timeout: 5000
 
 production:
   <<: *default

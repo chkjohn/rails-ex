@@ -1,0 +1,2 @@
+module Omniauth::AuthorizationHelper
+end
